@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknews=self.webpackChunknews||[]).push([[332],{20332:(e,s,t)=>{t.r(s),t.d(s,{default:()=>l});var a=t(94704),c=t(15956);class l extends a.A{getKey(){return"BaseImage"}convert(e){}async convertBack(e){const{hash:s,type:t}=e.style;if("local"===t){const t=await c.A.getCache(s);if(!t)return;e.style.localUrl=t.url}}}}}]);

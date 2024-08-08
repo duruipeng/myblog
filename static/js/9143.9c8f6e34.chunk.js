@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknews=self.webpackChunknews||[]).push([[9143],{39143:(e,s,k)=>{k.r(s)}}]);
