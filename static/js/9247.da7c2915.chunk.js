@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknews=self.webpackChunknews||[]).push([[9247],{79247:(t,e,a)=>{a.r(e),a.d(e,{default:()=>s});class s{static getDataFieldOptions(t){var e;const a=t.getConfig(),s=null===a||void 0===a||null===(e=a.data)||void 0===e?void 0:e.staticData,l=[];if(s&&s.length>=1){const t=s[0];Object.keys(t).forEach((t=>l.push({label:t,value:t})))}return l}}}}]);

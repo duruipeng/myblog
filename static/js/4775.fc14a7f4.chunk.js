@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknews=self.webpackChunknews||[]).push([[4775],{34775:(e,n,s)=>{s.r(n),s.d(n,{default:()=>l});var c=s(60712);function l(e){return(0,c.jsx)("div",{style:{outline:"none"},className:"lc-event-container",children:e.children})}}}]);

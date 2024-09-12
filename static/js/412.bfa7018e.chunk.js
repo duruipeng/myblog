@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknews=self.webpackChunknews||[]).push([[412],{80412:(e,l,s)=>{s.r(l),s.d(l,{TextOnly:()=>a});s(59284);var n=s(96592),t=s(60712);const a=e=>{const{defaultValue:l,tip:s,label:a}=e;return(0,t.jsx)(n.W,{tip:s,label:a,children:l})}}}]);

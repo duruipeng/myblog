@@ -1,0 +1,196 @@
+"use strict";
+(self["webpackChunknews"] = self["webpackChunknews"] || []).push([[411],{
+
+/***/ 70411:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(48331);
+/* harmony import */ var countup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(74216);
+/* harmony import */ var odometer_countup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(60098);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7579);
+const DigitalFlipperComponent=/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef((props,ref)=>{const[config,setConfig]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({...props});const eventHandlerMap=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)({});const countUpRef=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);let countUpAnim;(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{var _config$data,_config$style;countUpAnim=new countup_js__WEBPACK_IMPORTED_MODULE_1__.CountUp(countUpRef.current,(_config$data=config.data)===null||_config$data===void 0?void 0:_config$data.staticData,{plugin:((_config$style=config.style)===null||_config$style===void 0?void 0:_config$style.type)==='slide'?new odometer_countup__WEBPACK_IMPORTED_MODULE_2__.Odometer({duration:1,lastDigitDelay:0}):undefined,duration:1});if(!countUpAnim.error){countUpAnim.start();}else{console.error(countUpAnim.error);}},[]);(0,react__WEBPACK_IMPORTED_MODULE_0__.useImperativeHandle)(ref,()=>({updateConfig:newConfig=>setConfig({...newConfig}),changeData:newData=>countUpAnim.update(newData),setEventHandler:eventMap=>eventHandlerMap.current=eventMap}));const onClick=()=>{if('click'in eventHandlerMap.current){var _eventHandlerMap$curr,_eventHandlerMap$curr2;(_eventHandlerMap$curr=(_eventHandlerMap$curr2=eventHandlerMap.current)['click'])===null||_eventHandlerMap$curr===void 0?void 0:_eventHandlerMap$curr.call(_eventHandlerMap$curr2);}};const{style}=config;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{ref:countUpRef,style:{display:'flex',alignItems:'center',justifyContent:'center',height:'100%',...style},onClick:onClick});});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DigitalFlipperComponent);
+
+/***/ }),
+
+/***/ 74216:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CountUp: () => (/* binding */ i)
+/* harmony export */ });
+var t = function () {
+    return t = Object.assign || function (t) {
+      for (var i, n = 1, s = arguments.length; n < s; n++) for (var a in i = arguments[n]) Object.prototype.hasOwnProperty.call(i, a) && (t[a] = i[a]);
+      return t;
+    }, t.apply(this, arguments);
+  },
+  i = function () {
+    function i(i, n, s) {
+      var a = this;
+      this.endVal = n, this.options = s, this.version = "2.8.0", this.defaults = {
+        startVal: 0,
+        decimalPlaces: 0,
+        duration: 2,
+        useEasing: !0,
+        useGrouping: !0,
+        useIndianSeparators: !1,
+        smartEasingThreshold: 999,
+        smartEasingAmount: 333,
+        separator: ",",
+        decimal: ".",
+        prefix: "",
+        suffix: "",
+        enableScrollSpy: !1,
+        scrollSpyDelay: 200,
+        scrollSpyOnce: !1
+      }, this.finalEndVal = null, this.useEasing = !0, this.countDown = !1, this.error = "", this.startVal = 0, this.paused = !0, this.once = !1, this.count = function (t) {
+        a.startTime || (a.startTime = t);
+        var i = t - a.startTime;
+        a.remaining = a.duration - i, a.useEasing ? a.countDown ? a.frameVal = a.startVal - a.easingFn(i, 0, a.startVal - a.endVal, a.duration) : a.frameVal = a.easingFn(i, a.startVal, a.endVal - a.startVal, a.duration) : a.frameVal = a.startVal + (a.endVal - a.startVal) * (i / a.duration);
+        var n = a.countDown ? a.frameVal < a.endVal : a.frameVal > a.endVal;
+        a.frameVal = n ? a.endVal : a.frameVal, a.frameVal = Number(a.frameVal.toFixed(a.options.decimalPlaces)), a.printValue(a.frameVal), i < a.duration ? a.rAF = requestAnimationFrame(a.count) : null !== a.finalEndVal ? a.update(a.finalEndVal) : a.options.onCompleteCallback && a.options.onCompleteCallback();
+      }, this.formatNumber = function (t) {
+        var i,
+          n,
+          s,
+          e,
+          o = t < 0 ? "-" : "";
+        i = Math.abs(t).toFixed(a.options.decimalPlaces);
+        var r = (i += "").split(".");
+        if (n = r[0], s = r.length > 1 ? a.options.decimal + r[1] : "", a.options.useGrouping) {
+          e = "";
+          for (var l = 3, h = 0, u = 0, p = n.length; u < p; ++u) a.options.useIndianSeparators && 4 === u && (l = 2, h = 1), 0 !== u && h % l == 0 && (e = a.options.separator + e), h++, e = n[p - u - 1] + e;
+          n = e;
+        }
+        return a.options.numerals && a.options.numerals.length && (n = n.replace(/[0-9]/g, function (t) {
+          return a.options.numerals[+t];
+        }), s = s.replace(/[0-9]/g, function (t) {
+          return a.options.numerals[+t];
+        })), o + a.options.prefix + n + s + a.options.suffix;
+      }, this.easeOutExpo = function (t, i, n, s) {
+        return n * (1 - Math.pow(2, -10 * t / s)) * 1024 / 1023 + i;
+      }, this.options = t(t({}, this.defaults), s), this.formattingFn = this.options.formattingFn ? this.options.formattingFn : this.formatNumber, this.easingFn = this.options.easingFn ? this.options.easingFn : this.easeOutExpo, this.startVal = this.validateValue(this.options.startVal), this.frameVal = this.startVal, this.endVal = this.validateValue(n), this.options.decimalPlaces = Math.max(this.options.decimalPlaces), this.resetDuration(), this.options.separator = String(this.options.separator), this.useEasing = this.options.useEasing, "" === this.options.separator && (this.options.useGrouping = !1), this.el = "string" == typeof i ? document.getElementById(i) : i, this.el ? this.printValue(this.startVal) : this.error = "[CountUp] target is null or undefined", "undefined" != typeof window && this.options.enableScrollSpy && (this.error ? console.error(this.error, i) : (window.onScrollFns = window.onScrollFns || [], window.onScrollFns.push(function () {
+        return a.handleScroll(a);
+      }), window.onscroll = function () {
+        window.onScrollFns.forEach(function (t) {
+          return t();
+        });
+      }, this.handleScroll(this)));
+    }
+    return i.prototype.handleScroll = function (t) {
+      if (t && window && !t.once) {
+        var i = window.innerHeight + window.scrollY,
+          n = t.el.getBoundingClientRect(),
+          s = n.top + window.pageYOffset,
+          a = n.top + n.height + window.pageYOffset;
+        a < i && a > window.scrollY && t.paused ? (t.paused = !1, setTimeout(function () {
+          return t.start();
+        }, t.options.scrollSpyDelay), t.options.scrollSpyOnce && (t.once = !0)) : (window.scrollY > a || s > i) && !t.paused && t.reset();
+      }
+    }, i.prototype.determineDirectionAndSmartEasing = function () {
+      var t = this.finalEndVal ? this.finalEndVal : this.endVal;
+      this.countDown = this.startVal > t;
+      var i = t - this.startVal;
+      if (Math.abs(i) > this.options.smartEasingThreshold && this.options.useEasing) {
+        this.finalEndVal = t;
+        var n = this.countDown ? 1 : -1;
+        this.endVal = t + n * this.options.smartEasingAmount, this.duration = this.duration / 2;
+      } else this.endVal = t, this.finalEndVal = null;
+      null !== this.finalEndVal ? this.useEasing = !1 : this.useEasing = this.options.useEasing;
+    }, i.prototype.start = function (t) {
+      this.error || (this.options.onStartCallback && this.options.onStartCallback(), t && (this.options.onCompleteCallback = t), this.duration > 0 ? (this.determineDirectionAndSmartEasing(), this.paused = !1, this.rAF = requestAnimationFrame(this.count)) : this.printValue(this.endVal));
+    }, i.prototype.pauseResume = function () {
+      this.paused ? (this.startTime = null, this.duration = this.remaining, this.startVal = this.frameVal, this.determineDirectionAndSmartEasing(), this.rAF = requestAnimationFrame(this.count)) : cancelAnimationFrame(this.rAF), this.paused = !this.paused;
+    }, i.prototype.reset = function () {
+      cancelAnimationFrame(this.rAF), this.paused = !0, this.resetDuration(), this.startVal = this.validateValue(this.options.startVal), this.frameVal = this.startVal, this.printValue(this.startVal);
+    }, i.prototype.update = function (t) {
+      cancelAnimationFrame(this.rAF), this.startTime = null, this.endVal = this.validateValue(t), this.endVal !== this.frameVal && (this.startVal = this.frameVal, null == this.finalEndVal && this.resetDuration(), this.finalEndVal = null, this.determineDirectionAndSmartEasing(), this.rAF = requestAnimationFrame(this.count));
+    }, i.prototype.printValue = function (t) {
+      var i;
+      if (this.el) {
+        var n = this.formattingFn(t);
+        if (null === (i = this.options.plugin) || void 0 === i ? void 0 : i.render) this.options.plugin.render(this.el, n);else if ("INPUT" === this.el.tagName) this.el.value = n;else "text" === this.el.tagName || "tspan" === this.el.tagName ? this.el.textContent = n : this.el.innerHTML = n;
+      }
+    }, i.prototype.ensureNumber = function (t) {
+      return "number" == typeof t && !isNaN(t);
+    }, i.prototype.validateValue = function (t) {
+      var i = Number(t);
+      return this.ensureNumber(i) ? i : (this.error = "[CountUp] invalid start or end value: ".concat(t), null);
+    }, i.prototype.resetDuration = function () {
+      this.startTime = null, this.duration = 1e3 * Number(this.options.duration), this.remaining = this.duration;
+    }, i;
+  }();
+
+
+/***/ }),
+
+/***/ 60098:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Odometer: () => (/* binding */ Odometer)
+/* harmony export */ });
+var __assign = undefined && undefined.__assign || function () {
+    return (__assign = Object.assign || function (t) {
+      for (var e, n = 1, i = arguments.length; n < i; n++) for (var r in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
+      return t;
+    }).apply(this, arguments);
+  },
+  rAF = window.requestAnimationFrame || function (t) {
+    window.setTimeout(t, 1e3 / 60);
+  },
+  Odometer = function () {
+    function t(t) {
+      this.version = "1.0", this.defaults = {
+        duration: .8,
+        lastDigitDelay: .25
+      }, this.cell_digits = null, this.options = __assign(__assign({}, this.defaults), t), this.cell_digits = null;
+    }
+    return t.prototype.render = function (t, o) {
+      for (var e, s = this.options, n = !1, a = (this.cell_digits || (n = !0, document.querySelector("style[odometer]") || ((e = document.createElement("style")).setAttribute("odometer", "odometer"), e.innerHTML = ".odometer-numbers{display:inline-flex;line-height:100%;overflow-y:hidden}.odometer-numbers>span{display:flex;flex-direction:column;justify-content:start;align-items:center;height:1em;will-change:transform;transform:translateY(0)}", document.head.appendChild(e)), t.innerHTML = '<div class="odometer-numbers"></div>', this.cell_digits = []), '<span style="color:transparent">0</span>'), l = "transform ".concat(s.duration, "s ease-out"), d = this.cell_digits.length; d < o.length; d++) {
+        var i = document.createElement("span");
+        i.style.transition = l, i.innerHTML = n ? "" : a, t.firstChild && t.firstChild.appendChild(i), this.cell_digits.push({
+          container: i,
+          current: void 0,
+          position: n ? 1 : 0,
+          new: !0
+        });
+      }
+      function c(t, e) {
+        t.position--, t.container.appendChild(e), t.lastTimeAdd = +new Date(), t.new ? (t.new = !1, rAF(function () {
+          t.container.style.transform = "translateY(".concat(t.position, "em)");
+        })) : t.container.style.transform = "translateY(".concat(t.position, "em)");
+      }
+      function r() {
+        u = d < o.length ? o.charAt(d) : null;
+        var t,
+          e,
+          n,
+          i,
+          r = f.cell_digits[d];
+        r.current != u && (r.current = u, (m = document.createElement("span")).innerHTML = null === u ? a : u, r.container.children.length < 4 ? c(r, m) : (e = m, (t = r).nextToAdd && (c(t, t.nextToAdd), clearTimeout(t.lastTimer), t.nextToAdd = null), n = +new Date(), i = 1e3 * s.lastDigitDelay - (n - t.lastTimeAdd), s.lastDigitDelay <= 0 || n - t.lastTimeAdd >= 1.05 * i ? (c(t, e), t.nextToAdd = null) : (t.nextToAdd = e, t.lastTimer = setTimeout(function () {
+          c(t, t.nextToAdd), t.nextToAdd = null;
+        }, 1e3 * s.duration))), clearTimeout(r.timerClean), r.timerClean = setTimeout(function () {
+          r.timerClean = null, r.container.children.length < 3 || (r.container.style.transition = "none", rAF(function () {
+            for (r.position = -1; 1 < r.container.children.length;) r.container.removeChild(r.container.firstChild);
+            var t = document.createElement("span");
+            t.innerHTML = a, r.container.insertBefore(t, r.container.firstChild), r.container.style.transform = "translateY(".concat(r.position, "em)"), rAF(function () {
+              r.container.style.transition = l;
+            });
+          }));
+        }, 1e3 * ((s.duration || .8) + (s.duration || .25)) + 2500));
+      }
+      for (var u, m, h = Math.max(o.length, this.cell_digits.length), f = this, d = 0; d < h; d++) r();
+    }, t;
+  }();
+
+
+/***/ })
+
+}]);
