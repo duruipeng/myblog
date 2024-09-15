@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "./static/js/main.e086e2ec.js",
+    "main.js": "./static/js/main.dda6fe8a.js",
     "static/js/2337.a5dda76d.chunk.js": "./static/js/2337.a5dda76d.chunk.js",
     "static/js/1323.e8447678.chunk.js": "./static/js/1323.e8447678.chunk.js",
     "static/js/8794.72c56744.chunk.js": "./static/js/8794.72c56744.chunk.js",
@@ -238,7 +238,7 @@
     "static/js/6189.37833151.chunk.js": "./static/js/6189.37833151.chunk.js",
     "static/js/7610.b8765bcf.chunk.js": "./static/js/7610.b8765bcf.chunk.js",
     "static/js/7034.2ad7a09a.chunk.js": "./static/js/7034.2ad7a09a.chunk.js",
-    "static/js/9873.4e921256.chunk.js": "./static/js/9873.4e921256.chunk.js",
+    "static/js/9873.336b77eb.chunk.js": "./static/js/9873.336b77eb.chunk.js",
     "static/js/9397.e3bdcd8b.chunk.js": "./static/js/9397.e3bdcd8b.chunk.js",
     "static/js/254.741ee2d2.chunk.js": "./static/js/254.741ee2d2.chunk.js",
     "static/js/7091.8d579aa3.chunk.js": "./static/js/7091.8d579aa3.chunk.js",
@@ -255,9 +255,9 @@
     "static/js/4230.6615de1b.chunk.js": "./static/js/4230.6615de1b.chunk.js",
     "static/js/492.ccf18343.chunk.js": "./static/js/492.ccf18343.chunk.js",
     "static/js/1948.32963c07.chunk.js": "./static/js/1948.32963c07.chunk.js",
-    "static/js/3412.0a9bd93b.chunk.js": "./static/js/3412.0a9bd93b.chunk.js",
-    "static/js/4450.58e0b40f.chunk.js": "./static/js/4450.58e0b40f.chunk.js",
-    "static/js/8492.3c9f33d9.chunk.js": "./static/js/8492.3c9f33d9.chunk.js",
+    "static/js/3412.1f11e71b.chunk.js": "./static/js/3412.1f11e71b.chunk.js",
+    "static/js/4450.d3b8950f.chunk.js": "./static/js/4450.d3b8950f.chunk.js",
+    "static/js/8492.74f40fa9.chunk.js": "./static/js/8492.74f40fa9.chunk.js",
     "static/js/8707.b6d1dc7a.chunk.js": "./static/js/8707.b6d1dc7a.chunk.js",
     "static/media/DingTalk JinBuTi.ttf": "./static/media/DingTalk JinBuTi.a0bb3c3254df23cd2906.ttf",
     "static/media/DouyinSansBold.ttf": "./static/media/DouyinSansBold.f587f861eaf46bea5496.ttf",
@@ -289,6 +289,6 @@
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff"
   },
   "entrypoints": [
-    "static/js/main.e086e2ec.js"
+    "static/js/main.dda6fe8a.js"
   ]
 }
